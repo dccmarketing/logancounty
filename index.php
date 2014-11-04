@@ -8,7 +8,7 @@
  * E.g., it puts together the home page when no home.php file exists.
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package DocBlock
+ * @package Logan County
  */
 
 get_header();
@@ -29,7 +29,7 @@ get_header();
 
 			endwhile;
 
-			function_names_paging_nav();
+			logancounty_paging_nav();
 
 		else :
 

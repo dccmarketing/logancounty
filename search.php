@@ -2,7 +2,7 @@
 /**
  * The template for displaying search results pages.
  *
- * @package DocBlock
+ * @package Logan County
  */
 
 get_header(); ?>
@@ -15,7 +15,7 @@ get_header(); ?>
 			?><header class="page-header">
 				<h1 class="page-title"><?php 
 
-					printf( __( 'Search Results for: %s', 'text-domain' ), '<span>' . get_search_query() . '</span>' );
+					printf( __( 'Search Results for: %s', 'logan-county' ), '<span>' . get_search_query() . '</span>' );
 
 				?></h1>
 			</header><!-- .page-header --><?php
@@ -32,7 +32,7 @@ get_header(); ?>
 
 			endwhile;
 
-			function_names_paging_nav();
+			logancounty_paging_nav();
 
 		else :
 

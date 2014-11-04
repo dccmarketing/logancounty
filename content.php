@@ -1,6 +1,6 @@
 <?php
 /**
- * @package DocBlock
+ * @package Logan County
  */
 
 ?><article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -12,7 +12,7 @@
 
 			?><div class="entry-meta"><?php
 
-				function_names_posted_on();
+				logancounty_posted_on();
 
 			?></div><!-- .entry-meta --><?php
 
@@ -24,12 +24,12 @@
 
 			/* translators: %s: Name of current post */
 			the_content( sprintf(
-				__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'text-domain' ), 
+				__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'logan-county' ), 
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
 	
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'text-domain' ),
+				'before' => '<div class="page-links">' . __( 'Pages:', 'logan-county' ),
 				'after'  => '</div>',
 			) );
 
@@ -37,7 +37,7 @@
 
 	<footer class="entry-footer"><?php
 
-		function_names_entry_footer();
+		logancounty_entry_footer();
 
 	?></footer><!-- .entry-footer -->
 </article><!-- #post-## -->

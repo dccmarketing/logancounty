@@ -15,9 +15,13 @@
 		position 	: relative;
 		margin 		: 0 0.5em;
 		line-height : 1.5em;
+
+		svg {
+			width: 36px;
+		}
 	}
 
-	a[href*="facebook.com"] {
+	/* a[href*="facebook.com"] {
 		@include socialicon( $fa-var-facebook );
 	}
 	a[href*="twitter.com"] {
@@ -49,6 +53,6 @@
 	a[href*="/feed/"],
 	a[href*="/rss/"] {
 		@include socialicon( $fa-var-rss );
-	}
+	} */
 
 }

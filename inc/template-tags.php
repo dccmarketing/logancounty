@@ -4,10 +4,10 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package DocBlock
+ * @package Logan County
  */
 
-if ( ! function_exists( 'function_names_paging_nav' ) ) :
+if ( ! function_exists( 'logancounty_paging_nav' ) ) :
 /**
  * Display navigation to next/previous set of posts when applicable.
  *
@@ -16,34 +16,34 @@ if ( ! function_exists( 'function_names_paging_nav' ) ) :
  * @uses 	get_previous_posts_link()
  * @uses 	previous_posts_link()
  */
-	function function_names_paging_nav() {
+	function logancounty_paging_nav() {
 
 		// Don't print empty markup if there's only one page.
 		if ( $GLOBALS['wp_query']->max_num_pages < 2 ) { return; }
 
 		?><nav class="navigation paging-navigation" role="navigation">
-			<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'text-domain' ); ?></h1>
+			<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'logan-county' ); ?></h1>
 			<div class="nav-links">
 
 				<?php if ( get_next_posts_link() ) : ?>
-				<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'text-domain' ) ); ?></div>
+				<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'logan-county' ) ); ?></div>
 				<?php endif; ?>
 
 				<?php if ( get_previous_posts_link() ) : ?>
-				<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'text-domain' ) ); ?></div>
+				<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'logan-county' ) ); ?></div>
 				<?php endif; ?>
 
 			</div><!-- .nav-links -->
 		</nav><!-- .navigation --><?php
 
-	} // function_names_paging_nav()
+	} // logancounty_paging_nav()
 endif;
 
-if ( ! function_exists( 'function_names_post_nav' ) ) :
+if ( ! function_exists( 'logancounty_post_nav' ) ) :
 /**
  * Display navigation to next/previous post when applicable.
  */
-	function function_names_post_nav() {
+	function logancounty_post_nav() {
 
 		// Don't print empty markup if there's nowhere to navigate.
 		$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
@@ -52,19 +52,19 @@ if ( ! function_exists( 'function_names_post_nav' ) ) :
 		if ( ! $next && ! $previous ) {	return; }
 
 		?><nav class="navigation post-navigation" role="navigation">
-			<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'text-domain' ); ?></h1>
+			<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'logan-county' ); ?></h1>
 			<div class="nav-links"><?php
 
-				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span>&nbsp;%title', 'Previous post link', 'text-domain' ) );
-				next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title&nbsp;<span class="meta-nav">&rarr;</span>', 'Next post link',     'text-domain' ) );
+				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span>&nbsp;%title', 'Previous post link', 'logan-county' ) );
+				next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title&nbsp;<span class="meta-nav">&rarr;</span>', 'Next post link',     'logan-county' ) );
 			
 			?></div><!-- .nav-links -->
 		</nav><!-- .navigation --><?php
 
-	} // function_names_post_nav()
+	} // logancounty_post_nav()
 endif;
 
-if ( ! function_exists( 'function_names_posted_on' ) ) :
+if ( ! function_exists( 'logancounty_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  *
@@ -80,7 +80,7 @@ if ( ! function_exists( 'function_names_posted_on' ) ) :
  * @uses 	get_the_author_meta()
  * @uses 	get_the_author()
  */
-	function function_names_posted_on() {
+	function logancounty_posted_on() {
 
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
@@ -95,27 +95,27 @@ if ( ! function_exists( 'function_names_posted_on' ) ) :
 		);
 
 		$posted_on = sprintf(
-			_x( 'Posted on %s', 'post date', 'text-domain' ),
+			_x( 'Posted on %s', 'post date', 'logan-county' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
 		$byline = sprintf(
-			_x( 'by %s', 'post author', 'text-domain' ),
+			_x( 'by %s', 'post author', 'logan-county' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
 		echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>';
 
-	} // function_names_posted_on()
+	} // logancounty_posted_on()
 endif;
 
-if ( ! function_exists( 'function_names_entry_footer' ) ) :
+if ( ! function_exists( 'logancounty_entry_footer' ) ) :
 /**
  * Prints HTML with meta information for the categories, tags and comments.
  *
  * @uses 	get_post_type()
  * @uses 	get_the_category_list()
- * @uses 	function_names_categorized_blog()
+ * @uses 	logancounty_categorized_blog()
  * @uses 	get_the_tag_list()
  * @uses 	is_single()
  * @uses 	post_password_required()
@@ -124,24 +124,24 @@ if ( ! function_exists( 'function_names_entry_footer' ) ) :
  * @uses 	comments_popup_link()
  * @uses 	edit_post_link()
  */
-	function function_names_entry_footer() {
+	function logancounty_entry_footer() {
 
 		// Hide category and tag text for pages.
 		if ( 'post' == get_post_type() ) {
 
 			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( __( ', ', 'text-domain' ) );
-			if ( $categories_list && function_names_categorized_blog() ) {
+			$categories_list = get_the_category_list( __( ', ', 'logan-county' ) );
+			if ( $categories_list && logancounty_categorized_blog() ) {
 			
-				printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'text-domain' ) . '</span>', $categories_list );
+				printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'logan-county' ) . '</span>', $categories_list );
 			
 			}
 
 			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', __( ', ', 'text-domain' ) );
+			$tags_list = get_the_tag_list( '', __( ', ', 'logan-county' ) );
 			if ( $tags_list ) {
 			
-				printf( '<span class="tags-links">' . __( 'Tagged %1$s', 'text-domain' ) . '</span>', $tags_list );
+				printf( '<span class="tags-links">' . __( 'Tagged %1$s', 'logan-county' ) . '</span>', $tags_list );
 			
 			}
 		
@@ -150,14 +150,14 @@ if ( ! function_exists( 'function_names_entry_footer' ) ) :
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		
 			echo '<span class="comments-link">';
-			comments_popup_link( __( 'Leave a comment', 'text-domain' ), __( '1 Comment', 'text-domain' ), __( '% Comments', 'text-domain' ) );
+			comments_popup_link( __( 'Leave a comment', 'logan-county' ), __( '1 Comment', 'logan-county' ), __( '% Comments', 'logan-county' ) );
 			echo '</span>';
 		
 		}
 
-		edit_post_link( __( 'Edit', 'text-domain' ), '<span class="edit-link">', '</span>' );
+		edit_post_link( __( 'Edit', 'logan-county' ), '<span class="edit-link">', '</span>' );
 
-	} // function_names_entry_footer()
+	} // logancounty_entry_footer()
 endif;
 
 /**
@@ -169,9 +169,9 @@ endif;
  *
  * @return bool
  */
-function function_names_categorized_blog() {
+function logancounty_categorized_blog() {
 
-	if ( false === ( $all_the_cool_cats = get_transient( 'function_names_categories' ) ) ) {
+	if ( false === ( $all_the_cool_cats = get_transient( 'logancounty_categories' ) ) ) {
 	
 		// Create an array of all the categories that are attached to posts.
 		$all_the_cool_cats = get_categories( array(
@@ -185,34 +185,34 @@ function function_names_categorized_blog() {
 		// Count the number of categories that are attached to the posts.
 		$all_the_cool_cats = count( $all_the_cool_cats );
 
-		set_transient( 'function_names_categories', $all_the_cool_cats );
+		set_transient( 'logancounty_categories', $all_the_cool_cats );
 	
 	}
 
 	if ( $all_the_cool_cats > 1 ) {
 	
-		// This blog has more than 1 category so function_names_categorized_blog should return true.
+		// This blog has more than 1 category so logancounty_categorized_blog should return true.
 		return true;
 	
 	} else {
 	
-		// This blog has only 1 category so function_names_categorized_blog should return false.
+		// This blog has only 1 category so logancounty_categorized_blog should return false.
 		return false;
 	
 	}
 
-} // function_names_categorized_blog()
+} // logancounty_categorized_blog()
 
 /**
- * Flush out the transients used in function_names_categorized_blog.
+ * Flush out the transients used in logancounty_categorized_blog.
  *
  * @uses 	delete_transient()
  */
-function function_names_category_transient_flusher() {
+function logancounty_category_transient_flusher() {
 
 	// Like, beat it. Dig?
-	delete_transient( 'function_names_categories' );
+	delete_transient( 'logancounty_categories' );
 
-} // function_names_category_transient_flusher()
-add_action( 'edit_category', 'function_names_category_transient_flusher' );
-add_action( 'save_post',     'function_names_category_transient_flusher' );
+} // logancounty_category_transient_flusher()
+add_action( 'edit_category', 'logancounty_category_transient_flusher' );
+add_action( 'save_post',     'logancounty_category_transient_flusher' );

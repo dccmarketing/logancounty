@@ -3,13 +3,15 @@
 	display			: block;
 	float			: left;
 	width			: 100%;
-	margin-bottom	: $size__default-bot-marg;
+
+	@media only screen and (min-width: $bp__menu-button+1) {
+		margin-bottom: $size__default-bot-marg;
+	}
 
 	ul {
 		list-style	: none;
 		margin		: 0;
 		padding-left: 0;
-		display 	: inline-block;
 
 		ul {
 			display		: inherit;
@@ -82,8 +84,9 @@
 	li {
 
 		@media only screen and (min-width: $bp__menu-button+1) {	
-			float	: left;
-			position: relative;
+			/* float	: left;
+			position: relative; */
+			text-align: right;
 		}
 
 		&:hover > a {
@@ -106,9 +109,12 @@
 		display			: block;
 		text-decoration	: none;
 		color 			: $color__text-menu-mobile;
+		text-transform 	: uppercase;
 
 		@media only screen and (min-width: $bp__menu-button+1) {
-			color: $color__text-menu;
+			color 		: $color__text-menu;
+			font-size 	: $font__size-main-menu;
+			padding 	: 0.1em 1em;
 		}
 	}
 

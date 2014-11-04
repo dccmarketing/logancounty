@@ -1,7 +1,12 @@
 .site-content {
 	margin-bottom: $size__default-bot-marg;
-	@include grid-row();
 	max-width: $size__max-width;
+	width: 100%;
+	margin: 0 auto;
+
+	@media only screen and (min-width: $bp__tablet) {
+		margin-left: $size__site-sidebar;
+	}
 }
 
 .content-area {
@@ -9,10 +14,7 @@
 
 	@media only screen and (min-width: $bp__tablet) {
 		@include grid-column(8);
-
-		&.sidebar-content {
-			float: right;	
-		}
+		float: right;	
 	}
 }
 

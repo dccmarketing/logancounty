@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features
  *
- * @package DocBlock
+ * @package Logan County
  */
 
 /**
@@ -14,14 +14,14 @@
  * 
  * @return 	array
  */
-function function_names_page_menu_args( $args ) {
+function logancounty_page_menu_args( $args ) {
 
 	$args['show_home'] = true;
 	
 	return $args;
 
-} // function_names_page_menu_args()
-add_filter( 'wp_page_menu_args', 'function_names_page_menu_args' );
+} // logancounty_page_menu_args()
+add_filter( 'wp_page_menu_args', 'logancounty_page_menu_args' );
 
 /**
  * Adds custom classes to the array of body classes.
@@ -32,7 +32,7 @@ add_filter( 'wp_page_menu_args', 'function_names_page_menu_args' );
  * 
  * @return 	array
  */
-function function_names_body_classes( $classes ) {
+function logancounty_body_classes( $classes ) {
 
 	// Adds a class of group-blog to blogs with more than 1 published author.
 	if ( is_multi_author() ) {
@@ -43,8 +43,8 @@ function function_names_body_classes( $classes ) {
 
 	return $classes;
 
-} // function_names_body_classes()
-add_filter( 'body_class', 'function_names_body_classes' );
+} // logancounty_body_classes()
+add_filter( 'body_class', 'logancounty_body_classes' );
 
 /**
  * Filters wp_title to print a neat <title> tag based on what is being viewed.
@@ -59,7 +59,7 @@ add_filter( 'body_class', 'function_names_body_classes' );
  * 
  * @return 	string 					The filtered title.
  */
-function function_names_wp_title( $title, $sep ) {
+function logancounty_wp_title( $title, $sep ) {
 
 	if ( is_feed() ) { return $title; }
 
@@ -80,14 +80,14 @@ function function_names_wp_title( $title, $sep ) {
 	// Add a page number if necessary:
 	if ( ( $paged >= 2 || $page >= 2 ) && ! is_404() ) {
 
-		$title .= " $sep " . sprintf( __( 'Page %s', 'text-domain' ), max( $paged, $page ) );
+		$title .= " $sep " . sprintf( __( 'Page %s', 'logan-county' ), max( $paged, $page ) );
 
 	}
 
 	return $title;
 
-} // function_names_wp_title()
-add_filter( 'wp_title', 'function_names_wp_title', 10, 2 );
+} // logancounty_wp_title()
+add_filter( 'wp_title', 'logancounty_wp_title', 10, 2 );
 
 /**
  * Sets the authordata global when viewing an author archive.
@@ -105,7 +105,7 @@ add_filter( 'wp_title', 'function_names_wp_title', 10, 2 );
  * 
  * @return 	void
  */
-function function_names_setup_author() {
+function logancounty_setup_author() {
 	
 	global $wp_query;
 
@@ -115,5 +115,5 @@ function function_names_setup_author() {
 	
 	}
 
-} // function_names_setup_author()
-add_action( 'wp', 'function_names_setup_author' );
+} // logancounty_setup_author()
+add_action( 'wp', 'logancounty_setup_author' );

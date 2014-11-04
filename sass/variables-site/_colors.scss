@@ -1,6 +1,9 @@
-$light	: #fff;
-$med	: #ccc;
-$dark	: #020202;
+$light		: #fff;
+$med		: #818285;
+$dark		: #020202;
+$navy 		: #005273;
+$green 		: #84c447;
+$gray 		: #e7e7e8;
 
 // Backgrounds
 $color__background-body		: $light;
@@ -9,6 +12,7 @@ $color__background-hr		: #ccc;
 $color__background-button	: #e6e6e6;
 $color__background-pre		: #eee;
 $color__background-ins		: #fff9c0;
+$color__bg-header 			: $gray;
 
 // Text colors
 $color__text-screen			: #21759b;
@@ -39,14 +43,14 @@ $color__shadow-button-inner-focus 	: rgba(255, 255, 255, 0.5);
 $color__shadow-button-inner-2-focus : rgba(0, 0, 0, 0.15);
 
 // Menu colors
-$color__bg-menu-button			: $med;
+$color__bg-menu-button			: $navy;
 $color__bg-menu-item-mobile		: $med;
 $color__bg-menu-item			: $med;
 $color__bg-menu-current			: darken( $color__bg-menu-item, 25% );
 $color__text-menu-mobile		: $light;
 $color__text-menu-mobile-hover 	: $dark;
-$color__text-menu				: $dark;
-$color__text-menu-hover			: darken( $color__bg-menu-item, 25% );
+$color__text-menu				: $med;
+$color__text-menu-hover			: $light;
 $color__text-menu-button		: $light;
 $color__text-menu-current		: $light;
 $color__text-menu-current-hover	: $med;

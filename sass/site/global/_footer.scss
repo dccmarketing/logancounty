@@ -1,5 +1,13 @@
 .site-footer {
-	@include grid-column(12);
+	width: 100%;
+
+	@media only screen and (min-width: $bp__tablet) {
+		position: absolute;
+		bottom: 0;
+		width: $size__site-sidebar;
+		z-index: 1;
+		text-align: right;		
+	}
 }
 
 .footer-wrap {
@@ -7,27 +15,11 @@
 	margin: 0 auto;
 }
 
-.footer-left {
-	@include grid-column(12);
-
-	@media only screen and (min-width: $bp__tablet) {
-		@include grid-column(3);
-	}
-}
-
 .site-info {
 	text-align: center;
-	@include grid-column(12);
+	width: 100%;
 
 	@media only screen and (min-width: $bp__tablet) {
-		@include grid-column(6);
-	}
-}
-
-.footer-right {
-	@include grid-column(12);
-
-	@media only screen and (min-width: $bp__tablet) {
-		@include grid-column(3);
+		text-align: right;		
 	}
 }

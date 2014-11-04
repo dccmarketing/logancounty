@@ -1,8 +1,35 @@
-$font__main 				: sans-serif;
+$font__main 				: Lato, sans-serif;
 $font__code 				: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre 					: "Courier 10 Pitch", Courier, monospace;
 $font__line-height-body 	: 1.5;
 $font__line-height-pre 		: 1.6;
 $font__size-social 			: 36px;
+$font__cursive 				: 'freehand521_btregular';
+$font__handwriting 			: 'jenna_sueregular';
+$font__size-main-menu 		: 20px;
+
+@font-face {
+	font-family: 'jenna_sueregular';
+	src: url('fonts/jennasue-webfont.eot');
+	src: url('fonts/jennasue-webfont.eot?#iefix') format('embedded-opentype'),
+		url('fonts/jennasue-webfont.woff2') format('woff2'),
+		url('fonts/jennasue-webfont.woff') format('woff'),
+		url('fonts/jennasue-webfont.ttf') format('truetype'),
+		url('fonts/jennasue-webfont.svg#jenna_sueregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'freehand521_btregular';
+	src: url('fonts/freehand-521-bt-webfont.eot');
+	src: url('fonts/freehand-521-bt-webfont.eot?#iefix') format('embedded-opentype'),
+		url('fonts/freehand-521-bt-webfont.woff2') format('woff2'),
+		url('fonts/freehand-521-bt-webfont.woff') format('woff'),
+		url('fonts/freehand-521-bt-webfont.ttf') format('truetype'),
+		url('fonts/freehand-521-bt-webfont.svg#freehand521_btregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
 
 @import "fontawesome";

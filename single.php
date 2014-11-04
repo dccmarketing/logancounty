@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single posts.
  *
- * @package DocBlock
+ * @package Logan County
  */
 
 get_header();
@@ -14,7 +14,7 @@ get_header();
 
 			get_template_part( 'content', 'single' );
 
-			function_names_post_nav();
+			logancounty_post_nav();
 
 			// If comments are open or we have at least one comment, load up the comment template
 			if ( comments_open() || '0' != get_comments_number() ) {

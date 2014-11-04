@@ -4,7 +4,7 @@
  *
  * This file is centrally included from `wp-content/mu-plugins/wpcom-theme-compat.php`.
  *
- * @package DocBlock
+ * @package Logan County
  */
 
 /**
@@ -12,7 +12,7 @@
  *
  * @global array $themecolors
  */
-function function_names_wpcom_setup() {
+function logancounty_wpcom_setup() {
 
 	global $themecolors;
 
@@ -29,5 +29,5 @@ function function_names_wpcom_setup() {
 	
 	}
 
-} // function_names_wpcom_setup()
-add_action( 'after_setup_theme', 'function_names_wpcom_setup' );
+} // logancounty_wpcom_setup()
+add_action( 'after_setup_theme', 'logancounty_wpcom_setup' );

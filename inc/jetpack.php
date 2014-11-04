@@ -3,7 +3,7 @@
  * Jetpack Compatibility File
  * See: http://jetpack.me/
  *
- * @package DocBlock
+ * @package Logan County
  */
 
 /**
@@ -12,12 +12,12 @@
  * 
  * @uses 	add_theme_support()
  */
-function function_names_jetpack_setup() {
+function logancounty_jetpack_setup() {
 
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'main',
 		'footer'    => 'page',
 	) );
 
-} // function_names_jetpack_setup()
-add_action( 'after_setup_theme', 'function_names_jetpack_setup' );
+} // logancounty_jetpack_setup()
+add_action( 'after_setup_theme', 'logancounty_jetpack_setup' );
