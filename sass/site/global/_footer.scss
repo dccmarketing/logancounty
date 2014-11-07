@@ -1,9 +1,10 @@
 .site-footer {
 	width: 100%;
+	color: $color__text-footer;
 
 	@media only screen and (min-width: $bp__tablet) {
-		position: absolute;
-		bottom: 0;
+		position: fixed;
+		padding: 700px 1em 0;
 		width: $size__site-sidebar;
 		z-index: 1;
 		text-align: right;		
@@ -21,5 +22,19 @@
 
 	@media only screen and (min-width: $bp__tablet) {
 		text-align: right;		
+	}
+}
+
+.address {
+	text-transform: uppercase;
+}
+
+.copyright,
+.credits {
+	font-size: $font__size-text-footer;
+
+	a {
+		color: $color__text-footer;
+		text-decoration: none;
 	}
 }

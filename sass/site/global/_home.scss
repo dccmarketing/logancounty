@@ -1,0 +1,184 @@
+.home {
+
+	.content-area {
+		width 		: 100%;
+		padding 	: 0;
+	}
+
+	h2 {
+		text-align 	: center;
+		color 		: $color__text-home-headings;
+	}
+
+	.moment {
+		position 	: absolute;
+		z-index 	: 10;
+		top 		: -115px;
+		left 		: -100px;
+	}
+
+	.checkbox {
+		position	: absolute;
+		z-index 	: 10;
+		bottom 		: -35px;
+		left 		: 7px;
+		width 		: 55px;
+	}
+
+	.slider-wrap {
+		background 	: #fff;
+		z-index 	: 0;
+		width 		: 550px;
+		height 		: 550px;
+		position 	: relative;
+		top 		: 50%;
+		transform 	: translateY(-50%);
+		margin 		: 0 auto;
+		padding 	: 25px;
+	}
+
+	.soliloquy-container {
+
+		.soliloquy-viewport {
+			overflow: visible !important;
+		}
+
+		.soliloquy-controls {
+			display: none !important;
+		}
+
+		.soliloquy-caption {
+			bottom 		: -100px;
+			background 	: transparent;
+			width 		: 600px;
+			left 		: -50px;
+
+			background 			: url( images/paper_strip_bkgd.png );
+			background-repeat 	: no-repeat;
+			background-size 	: cover;
+		}
+
+		.soliloquy-caption-inside {
+			padding 		: 0.4em 2em !important;
+			text-shadow 	: none !important;
+			color 			: $color__text-home-headings;
+			font-family 	: $font__handwriting;
+			font-size 		: $font__size-home-slider;
+			line-height 	: 0.85em;
+		}
+	}
+
+	.icon-menu {
+		text-decoration: none;
+	}
+
+	.menu-icon-label {
+		color 			: $color__text-icon-menu;
+		text-transform 	: uppercase;
+		font-size 		: 18px;
+	}
+}
+
+.home-top {
+	background-image 	: url(images/main_bkgd.png);
+	background-size 	: cover;
+	background-repeat 	: no-repeat;
+	background-position : top center;
+	height 				: 1000px;
+}
+
+.home-adventure {
+	text-align: center;
+	
+	@include homedividers();
+}
+
+	.history-img {
+		margin: 0.5em 0;
+	}
+
+.home-connect {
+	@include homedividers();
+}
+
+.home-events {
+	@include homedividers();
+
+}
+
+.home-places {
+	@include homedividers();
+
+	.nav-homeplaces {
+		ul {
+			list-style: none;
+			text-align: center;
+		}
+
+		li {
+			display : inline-block;
+			margin 	: 2em;
+		}
+	}
+
+	svg {
+		width: 175px;
+		margin-bottom: $size__default-bot-marg;
+	}
+}
+
+.home-happenings {
+	padding: 2em;
+
+	.post-container {
+		border: 1px solid $color__post-containers;
+		overflow: auto;
+	}
+
+	.post-wrapper {
+		margin: 0 auto;
+		width: 60%;
+		text-align: center;
+	}
+
+	.entry-meta {
+		display 		: inline-block;
+		color 			: $color__text-happenings;
+		text-transform 	: uppercase;
+		float 			: left;
+	}
+
+	.entry-title {
+		display: inline-block;
+		text-align: center;
+		width: 75%;
+
+		a {
+			color 				: $color__text-happenings-title;
+			text-decoration 	: none;
+		}
+	}
+
+	.post-arrows {
+		color: $color__text-happenings;
+		float: right;
+	}
+}
+
+.nav-homelinks {
+
+	ul {
+		list-style 	: none;
+		margin 		: 0;
+		text-align 	: center;
+	}
+
+	li {
+		display: inline-block;
+		margin: 2em;
+	}
+
+	svg {
+		width: 75px;
+	}
+}

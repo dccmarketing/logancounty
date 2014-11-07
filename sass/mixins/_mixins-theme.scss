@@ -1,0 +1,14 @@
+@mixin homedividers() {
+	position: relative;
+	padding: 2em;
+
+	&:before {
+		width 			: 70%;
+		border-bottom 	: 2px dotted $color__border-home-dividers;
+		content 		: "";
+		position 		: absolute;
+		left			: 15%;
+		bottom 			: 0;
+		height 			: 1px;
+	}
+}

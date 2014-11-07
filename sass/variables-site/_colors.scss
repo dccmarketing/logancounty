@@ -13,18 +13,25 @@ $color__background-button	: #e6e6e6;
 $color__background-pre		: #eee;
 $color__background-ins		: #fff9c0;
 $color__bg-header 			: $gray;
+$color__bg-submit-button 	: $navy;
 
 // Text colors
-$color__text-screen			: #21759b;
-$color__text-input			: #666;
-$color__text-input-focus	: #111;
-$color__link				: royalblue;
-$color__link-visited		: purple;
-$color__link-hover			: midnightblue;
-$color__text-main			: #404040;
-$color__text-social 		: $light;
-$color__text-ins 			: black;
-$color__text-button 		: rgba(0, 0, 0, .8);
+$color__text-screen				: #21759b;
+$color__text-input				: #666;
+$color__text-input-focus		: #111;
+$color__link					: royalblue;
+$color__link-visited			: purple;
+$color__link-hover				: midnightblue;
+$color__text-main				: #404040;
+$color__text-social 			: $light;
+$color__text-ins 				: black;
+$color__text-button 			: rgba(0, 0, 0, .8);
+$color__text-footer 			: $med;
+$color__text-home-headings 		: $navy;
+$color__text-submit-button 		: $light;
+$color__text-icon-menu 			: $med;
+$color__text-happenings 		: $green;
+$color__text-happenings-title 	: $med;
 
 // Border colors
 $color__border-button		: #ccc #ccc #bbb;
@@ -32,6 +39,8 @@ $color__border-button-hover	: #ccc #bbb #aaa;
 $color__border-button-focus	: #aaa #bbb #bbb;
 $color__border-input		: #ccc;
 $color__border-abbr			: #666;
+$color__border-home-dividers: $med;
+$color__post-containers 	: $med;
 
 // Shadow colors
 $color__shadow-button-text 			: rgba(255, 255, 255, 0.8);

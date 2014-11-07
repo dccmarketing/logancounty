@@ -8,16 +8,17 @@
 	.menu-items {
 		list-style 	: none;
 		margin 		: 0;
+		text-align 	: center;
 	}
 
 	.menu-item {
 		display 	: inline-block;
 		position 	: relative;
-		margin 		: 0 0.5em;
+		margin 		: 0 1em;
 		line-height : 1.5em;
 
 		svg {
-			width: 36px;
+			width: 48px;
 		}
 	}
 
