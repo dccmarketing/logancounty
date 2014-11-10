@@ -128,7 +128,8 @@
 		}
 
 		> .event-image .event-hover {
-			visibility: visible;
+			transform 	: translate(0,0);
+			visibility 	: visible;
 		}
 	}
 }
@@ -141,6 +142,8 @@
 	background-position : center center;
 	background-size 	: cover;
 	padding 			: 15px;
+	overflow 			: hidden;
+	mask-image 			: -webkit-radial-gradient(circle, white, black);
 }
 
 .event-hover {
@@ -151,6 +154,8 @@
 	overflow 		: auto;
 	padding 		: 3em 2em 0;
 	background 		: rgba(0,0,0,0.5);
+	transform 		: translate(0,110%);
+	transition 		: all 0.75s;
 	visibility 		: hidden;
 
 	.event-date {
