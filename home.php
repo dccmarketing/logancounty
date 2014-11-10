@@ -13,11 +13,11 @@ get_header();
 			<div class="home-top">
 				<div class="slider-wrap"><?php
 
-					echo get_icon( 'moment' );
+					echo get_svg( 'moment' );
 				
 					if ( function_exists( 'soliloquy' ) ) { soliloquy( '111' ); }
 
-					echo get_icon( 'check' );
+					echo get_svg( 'check' );
 
 				?></div>
 			</div>
@@ -38,7 +38,47 @@ get_header();
 			<div class="home-events">
 				<h2>&mdash; Upcoming Events &mdash;</h2><?php
 
-				// display 5 calendar events
+				$events = tribe_get_events( array('posts_per_page' => 4 ) );
+
+				if ( empty( $events ) ) {
+
+					echo '<p class="no-events">Check back later for more upcoming events!</p>';
+
+				} else {
+
+					echo '<div class="events-wrap">';
+
+					foreach ( $events as $post ) {
+
+						setup_postdata( $post );
+
+						$thumb_id 		= get_post_thumbnail_id();
+						$thumb_array 	= wp_get_attachment_image_src( $thumb_id, 'thumbnail', true );
+						$thumb_url 		= $thumb_array[0];
+
+						?><div class="event">
+							<div class="event-image"<?php 
+								if ( has_post_thumbnail() ) {
+									?> style="background-image: url(<?php echo $thumb_url; ?>)"<?php
+								} ?>>
+								<div class="event-hover">
+									<div class="event-date"><?php echo tribe_get_start_date( $post->ID, true, 'M d, Y' ); ?></div><!-- .event-date -->
+									<a href="<?php the_permalink(); ?>">More Info</a>
+								</div><!-- .event-hover -->
+							</div><!-- .event-image -->
+							<a href="<?php the_permalink(); ?>">
+								<h3 class="event-title"><?php the_title(); ?></h3><!-- .event-title -->
+								<div class="event-date"><?php echo tribe_get_start_date( $post->ID, true, 'M d, Y' ); ?></div><!-- .event-date -->
+							</a>
+						</div><!-- .event --><?php
+
+					} // foreach
+
+					wp_reset_query();
+
+					echo '</div><!-- .events_wrap -->';
+
+				} // enpty check
 
 			?></div>
 			<div class="home-places">

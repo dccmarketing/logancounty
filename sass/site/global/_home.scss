@@ -103,7 +103,75 @@
 
 .home-events {
 	@include homedividers();
+}
 
+.events-wrap {
+	text-align: center;
+}
+
+.event {
+	text-align 		: center;
+	width 			: 23%;
+	display 		: inline-block;
+	vertical-align 	: top;
+	margin 			: 1em 1%;
+
+	a {
+		text-decoration : none;
+		color 			: $color__text-event-title;
+	}
+
+	&:hover {
+
+		> a {
+			color: $color__text-event-title-hover;
+		}
+
+		> .event-image .event-hover {
+			visibility: visible;
+		}
+	}
+}
+
+.event-image {
+	height 				: 200px;
+	width 				: 200px;
+	border-radius 		: 100px;
+	background-repeat 	: no-repeat;
+	background-position : center center;
+	background-size 	: cover;
+	padding 			: 15px;
+}
+
+.event-hover {
+	width 			: 170px;
+	height 			: 170px;
+	border-radius 	: 85px;
+	border 			: 2px solid white;
+	overflow 		: auto;
+	padding 		: 3em 2em 0;
+	background 		: rgba(0,0,0,0.5);
+	visibility 		: hidden;
+
+	.event-date {
+		color 			: $color__text-event-hover-title;
+		line-height 	: 1em;
+		margin-bottom 	: 0.5em;
+	}
+
+	a {
+		color 			: $color__text-event-hover-link;
+		text-transform 	: uppercase;
+	}
+}
+
+.event-date {
+	text-transform	: uppercase;
+	font-size 		: $font__size-main-menu;
+}
+
+.no-events {
+	text-align: center;
 }
 
 .home-places {

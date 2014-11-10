@@ -14,46 +14,11 @@
 	.menu-item {
 		display 	: inline-block;
 		position 	: relative;
-		margin 		: 0 1em;
+		margin 		: 0 0.4em;
 		line-height : 1.5em;
 
 		svg {
 			width: 48px;
 		}
 	}
-
-	/* a[href*="facebook.com"] {
-		@include socialicon( $fa-var-facebook );
-	}
-	a[href*="twitter.com"] {
-		@include socialicon( $fa-var-twitter );
-	}
-	a[href*="plus.google.com"] {
-		@include socialicon( $fa-var-google-plus );
-	}
-	a[href*="pinterest.com"] {
-		@include socialicon( $fa-var-pinterest );
-	}
-	a[href*="tumblr.com"] {
-		@include socialicon( $fa-var-tumblr );
-	}
-	a[href*="youtube.com"] {
-		@include socialicon( $fa-var-youtube );
-	}
-	a[href*="flickr.com"] {
-		@include socialicon( $fa-var-flickr );
-	}
-	a[href*="instagram.com"] {
-		@include socialicon( $fa-var-instagram );
-	}
-	a[href*="linkedin.com"] {
-		@include socialicon( $fa-var-linkedin );
-	}
-	a[href$=".rss"], 
-	a[href$="rss.xml"], 
-	a[href*="/feed/"],
-	a[href*="/rss/"] {
-		@include socialicon( $fa-var-rss );
-	} */
-
 }

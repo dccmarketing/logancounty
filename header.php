@@ -28,7 +28,7 @@ wp_head();
 			<div class="site-branding">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php
 
-					echo get_icon( 'logo_color' );
+					echo get_svg( 'logo_color' );
 				
 				?></a>
 			</div><!-- .site-branding -->
