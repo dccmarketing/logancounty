@@ -20,5 +20,23 @@
 		svg {
 			width: 48px;
 		}
+
+		&:hover {
+			> a svg path {
+				fill: $color__svgfill-social-hover;
+			}
+		}
+	}
+}
+
+.nav-homeplaces {
+	li:hover > a svg path {
+		fill: $color__svgfill-homeplaces-hover;
+	}
+}
+
+.nav-homelinks {
+	li:hover > a svg path {
+		fill: $color__svgfill-homelinks-hover;
 	}
 }

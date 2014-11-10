@@ -229,6 +229,10 @@
 		a {
 			color 				: $color__text-happenings-title;
 			text-decoration 	: none;
+
+			&:hover {
+				font-weight: bold;
+			}
 		}
 	}
 

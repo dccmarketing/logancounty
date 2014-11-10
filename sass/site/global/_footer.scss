@@ -3,22 +3,23 @@
 	color: $color__text-footer;
 
 	@media only screen and (min-width: $bp__tablet) {
-		position: fixed;
-		padding: 700px 1em 0;
-		width: $size__site-sidebar;
-		z-index: 1;
-		text-align: right;		
+		position 	: fixed;
+		padding 	: 0 1.25em;
+		top 		: 750px;
+		width 		: $size__site-sidebar;
+		z-index 	: 1;
+		text-align 	: right;		
 	}
 }
 
 .footer-wrap {
-	max-width: $size__max-width;
-	margin: 0 auto;
+	max-width 	: $size__max-width;
+	margin 		: 0 auto;
 }
 
 .site-info {
-	text-align: center;
-	width: 100%;
+	text-align 	: center;
+	width 		: 100%;
 
 	@media only screen and (min-width: $bp__tablet) {
 		text-align: right;		
@@ -34,7 +35,7 @@
 	font-size: $font__size-text-footer;
 
 	a {
-		color: $color__text-footer;
-		text-decoration: none;
+		color 				: $color__text-footer;
+		text-decoration 	: none;
 	}
 }
