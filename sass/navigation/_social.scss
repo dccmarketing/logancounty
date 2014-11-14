@@ -1,4 +1,6 @@
 .nav-social {
+	margin: 0 auto 0.5em;
+	max-width: 350px;
 
 	.screen-reader-text,
 	a {
@@ -12,10 +14,9 @@
 	}
 
 	.menu-item {
-		display 	: inline-block;
-		position 	: relative;
-		margin 		: 0 0.4em;
 		line-height : 1.5em;
+
+		@include evencols( 5 );
 
 		svg {
 			width: 48px;
@@ -26,17 +27,5 @@
 				fill: $color__svgfill-social-hover;
 			}
 		}
-	}
-}
-
-.nav-homeplaces {
-	li:hover > a svg path {
-		fill: $color__svgfill-homeplaces-hover;
-	}
-}
-
-.nav-homelinks {
-	li:hover > a svg path {
-		fill: $color__svgfill-homelinks-hover;
 	}
 }

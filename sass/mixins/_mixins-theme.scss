@@ -1,6 +1,6 @@
 @mixin homedividers() {
 	position: relative;
-	padding: 2em;
+	padding: 1em;
 
 	&:before {
 		width 			: 70%;
@@ -10,5 +10,24 @@
 		left			: 15%;
 		bottom 			: 0;
 		height 			: 1px;
+	}
+
+	@media screen and (min-width: $bp__menu-button+1) {
+		padding: 2em;
+	}
+}
+
+@mixin homemenus {
+	margin: 2em auto 0;
+	max-width: 650px;
+
+	ul {
+		list-style 	: none;
+		margin 		: 0;
+		text-align 	: center;
+	}
+
+	li {
+		@include evencols( 3 );
 	}
 }

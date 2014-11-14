@@ -40,9 +40,7 @@ wp_head();
 			
 			?></nav><!-- #site-navigation --><?php
 
-			get_search_form( TRUE );
-
-			get_template_part( 'menus/menu', 'social' );
+			//get_search_form( TRUE );
 
 		?></div><!-- .header_wrap -->
 	</header><!-- #masthead -->

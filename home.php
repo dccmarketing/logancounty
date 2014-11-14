@@ -13,22 +13,20 @@ get_header();
 			<div class="home-top">
 				<div class="slider-wrap"><?php
 
-					echo get_svg( 'moment' );
+					//echo get_svg( 'moment' );
 				
 					if ( function_exists( 'soliloquy' ) ) { soliloquy( '111' ); }
-
-					echo get_svg( 'check' );
 
 				?></div>
 			</div>
 			<div class="home-adventure">
-				<h2>&mdash; Our History. Your Adventure. &mdash;</h2>
+				<h2>Our History. Your Adventure.</h2>
 				<a href="/things-to-do/">
 					<img class="history-img" src="<?php echo get_template_directory_uri(); ?>/images/history_bkgd_all.png" />
 				</a>
 			</div>
 			<div class="home-connect">
-				<h2>&mdash; Connect with Us &mdash;</h2><?php
+				<h2>Connect with Us</h2><?php
 
 				echo FrmFormsController::get_form_shortcode( array( 'id' => 6, 'title' => false, 'description' => false ) );
 
@@ -36,7 +34,7 @@ get_header();
 
 			?></div>
 			<div class="home-events">
-				<h2>&mdash; Upcoming Events &mdash;</h2><?php
+				<h2>Upcoming Events</h2><?php
 
 				$events = tribe_get_events( array('posts_per_page' => 4 ) );
 
@@ -82,13 +80,13 @@ get_header();
 
 			?></div>
 			<div class="home-places">
-				<h2>&mdash; Places to Lay Your Head &mdash;</h2><?php
+				<h2>Places to Lay Your Head</h2><?php
 
 				get_template_part( 'menus/menu', 'homeplaces' );
 
 			?></div>
 			<div class="home-happenings">
-				<h2>&mdash; Happenings &mdash;</h2><?php
+				<h2>Happenings</h2><?php
 
 				if ( have_posts() ) :
 

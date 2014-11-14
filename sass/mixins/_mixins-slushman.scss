@@ -28,7 +28,7 @@
 }
 
 /**
- * Responsive width
+ * Responsive widths, with margins
  *
  * This is based on a 12 column grid
  * Margin is constant: 1.666%
@@ -43,7 +43,6 @@
 	$width		: percentage( $boxwidth / 100 );
 
 	@if ( $span > 1 ) {
-		// $width: percentage( ( ( $boxwidth * $span ) - ( $margin * $span ) ) / 100 );
 		$width: percentage( ( ( ( 100 / 12 ) * $span ) - ( $margin * 2 ) ) / 100 );
 	}
 
@@ -52,6 +51,39 @@
 	float		: left;
 	margin-left	: $marginperc;
 	margin-right: $marginperc;
+}
+
+/**
+ * Responsive widths, without margins
+ *
+ * @param 	int 	$quantity 	The total number of columns
+ */
+@mixin evencols( $quantity ) {
+
+	width 			: percentage( ( ( 100 / $quantity ) - 1 ) / 100 );
+	display 		: inline-block;
+	vertical-align 	: top;
+
+} // evencols()
+
+@mixin margcols( $quantity, $span: 1, $margin: 1.66666666666667 ) {
+
+	$margins	: $quantity * ( $margin * 2 );
+	$boxwidth	: ( 100 - $margins ) / $quantity;
+	$width		: percentage( $boxwidth / 100 );
+
+	@if ( $span > 1 ) {
+		$width: percentage( ( ( ( 100 / $quantity ) * $span ) - ( $margin * 2 ) ) / 100 );
+	}
+
+	$marginperc	 	: percentage( $margin / 100 );
+
+	width			: $width;
+	margin-left	 	: $marginperc;
+	margin-right 	: $marginperc;
+	display 		: inline-block;
+	vertical-align 	: top;
+
 }
 
 /**

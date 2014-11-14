@@ -1,11 +1,12 @@
 .site-header {
-	margin-bottom	: $size__default-bot-marg;
+	background: $color__bg-header;
 
 	@media only screen and (max-width: $bp__menu-button) {
 		overflow: auto;
 	}
 
 	@media only screen and (min-width: $bp__menu-button+1) {
+		margin-bottom	: $size__default-bot-marg;
 		position: fixed;
 		width 	: $size__site-sidebar;
 		height 	: 100%;
@@ -16,8 +17,13 @@
 	}
 
 	.search-form {
+		display: none;
 		text-align: center;
 		margin-bottom: $size__default-bot-marg;
+
+		@media only screen and (min-width: $bp__menu-button+1) {
+			display: inherit;
+		}
 
 		.search-field {
 			width: 80%;
@@ -27,10 +33,9 @@
 
 .site-branding {
 	padding		: 1em;
-	margin		: 0 auto;
-	max-width	: $size__max-width;
+	text-align 	: center;
 }
 
-.site-title {
-	text-align: center;
+.logo_color {
+	max-width: 500px;
 }

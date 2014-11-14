@@ -10,9 +10,11 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
+	<footer id="colophon" class="site-footer" role="contentinfo"><?php
 
-		<div class="footer-wrap">
+		get_template_part( 'menus/menu', 'social' );
+
+		?><div class="footer-wrap">
 
 			<div class="site-info"><?php
 

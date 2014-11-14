@@ -8,33 +8,62 @@
 	h2 {
 		text-align 	: center;
 		color 		: $color__text-home-headings;
+
+		@media screen and (min-width: $bp__menu-button+1) {
+			&:before,
+			&:after {
+				content: "—";
+			}
+		}
 	}
 
 	.moment {
-		position 	: absolute;
-		z-index 	: 10;
-		top 		: -115px;
-		left 		: -100px;
+		display: none;		
+
+		@media screen and (min-width: $bp__menu-button+1) {
+			display 	: inherit;
+			position 	: absolute;
+			top 		: -115px;
+			left 		: -100px;
+			z-index 	: 500;
+		}
 	}
 
 	.checkbox {
-		position	: absolute;
-		z-index 	: 10;
-		bottom 		: -35px;
-		left 		: 7px;
-		width 		: 55px;
+		display: none;
+
+		@media screen and (min-width: $bp__slider-caption) {
+			display 	: inherit;
+			position	: absolute;
+			width 		: 55px;
+			top 		: 30px;
+			left 		: 55px;
+		}
 	}
 
 	.slider-wrap {
 		background 	: #fff;
-		z-index 	: 0;
-		width 		: 550px;
-		height 		: 550px;
-		position 	: relative;
-		top 		: 50%;
-		transform 	: translateY(-50%);
+		width 		: 100%;
+		padding 	: 10px;
+		max-width 	: 550px;
 		margin 		: 0 auto;
-		padding 	: 25px;
+
+		@media screen and (min-width: $bp__slider-caption) {
+			padding 	: 25px;
+		}
+
+		@media screen and (min-width: $bp__menu-button+1) {
+			max-height 	: 550px;
+			position 	: relative;
+			top 		: 50%;
+			transform 	: translateY(-50%);
+			margin-left : 65px;
+			width 		: calc( 100% - 65px );
+		}
+
+		@media screen and (min-width: $bp__slider-widest) {
+			margin-left: auto;
+		}
 	}
 
 	.soliloquy-container {
@@ -48,23 +77,31 @@
 		}
 
 		.soliloquy-caption {
-			bottom 		: -100px;
 			background 	: transparent;
-			width 		: 600px;
+			width 		: 120%;
+			padding 	: 0 0.5em 0 7em;
+
+			bottom 		: -100px;
 			left 		: -50px;
 
 			background 			: url( images/paper_strip_bkgd.png );
 			background-repeat 	: no-repeat;
 			background-size 	: cover;
+
 		}
 
 		.soliloquy-caption-inside {
-			padding 		: 0.4em 2em !important;
+			padding 		: 0.4em 0;
 			text-shadow 	: none !important;
 			color 			: $color__text-home-headings;
 			font-family 	: $font__handwriting;
-			font-size 		: $font__size-home-slider;
+			font-size 		: $font__size-home-slider-mobile;
 			line-height 	: 0.85em;
+
+			@media screen and (min-width: $bp__slider-widest) {
+				padding-right 	: 2em;
+				font-size 		: $font__size-home-slider;
+			}
 		}
 	}
 
@@ -84,7 +121,19 @@
 	background-size 	: cover;
 	background-repeat 	: no-repeat;
 	background-position : top center;
-	height 				: 1000px;
+	padding 			: 1em;
+
+	@media screen and (min-width: $bp__slider-caption) and (max-width: $bp__menu-button) {
+		padding-bottom: 10em;
+	}
+
+	@media screen and (min-width: $bp__menu-button+1) {
+		height 	: 750px;
+	}
+
+	@media screen and (min-width: $bp__slider-widest) {
+		height 	: 1000px;
+	}
 }
 
 .home-adventure {
@@ -101,6 +150,33 @@
 	@include homedividers();
 }
 
+.nav-homelinks {
+	@include homemenus();
+
+	li {
+
+		&:hover > a svg path {
+			fill: $color__svgfill-homelinks-hover;
+		}
+	}
+
+	.menu-icon-label {
+		display: none;
+
+		@media screen and (min-width: $bp__menu-button - 150) {
+			display: block;
+		}
+	}
+
+	svg {
+		max-width: 75px;
+	}
+
+	.map-route {
+		height: 75px;
+	}
+}
+
 .home-events {
 	@include homedividers();
 }
@@ -110,11 +186,18 @@
 }
 
 .event {
-	text-align 		: center;
-	width 			: 23%;
-	display 		: inline-block;
-	vertical-align 	: top;
-	margin 			: 1em 1%;
+	text-align 	: center;
+	width 		: 100%;
+	margin 		: 1em auto;
+
+	@media screen and (min-width: $bp__events-half) {
+		@include evencols( 2 );
+		padding: 0 2%;
+	}		
+
+	@media screen and (min-width: $bp__slider-widest) {
+		@include evencols( 4 );
+	}
 
 	a {
 		text-decoration : none;
@@ -135,33 +218,33 @@
 }
 
 .event-image {
-	height 				: 200px;
-	width 				: 200px;
-	border-radius 		: 100px;
+	height 				: 150px;
+	width 				: 150px;
+	border-radius 		: 50%;
 	background-repeat 	: no-repeat;
 	background-position : center center;
 	background-size 	: cover;
-	padding 			: 15px;
 	overflow 			: hidden;
 	mask-image 			: -webkit-radial-gradient(circle, white, black);
+	margin 				: 0 auto;
 }
 
 .event-hover {
-	width 			: 170px;
-	height 			: 170px;
-	border-radius 	: 85px;
+	width 			: 85%;
+	height 			: 85%;
+	border-radius 	: 50%;
 	border 			: 2px solid white;
 	overflow 		: auto;
-	padding 		: 3em 2em 0;
 	background 		: rgba(0,0,0,0.5);
 	transform 		: translate(0,110%);
 	transition 		: all 0.75s;
 	visibility 		: hidden;
+	margin 			: 7.5% auto;
 
 	.event-date {
 		color 			: $color__text-event-hover-title;
 		line-height 	: 1em;
-		margin-bottom 	: 0.5em;
+		margin 			: 2.25em 0 0.5em;
 	}
 
 	a {
@@ -181,50 +264,59 @@
 
 .home-places {
 	@include homedividers();
+}
 
-	.nav-homeplaces {
-		ul {
-			list-style: none;
-			text-align: center;
-		}
+.nav-homeplaces {
+	@include homemenus();
 
-		li {
-			display : inline-block;
-			margin 	: 2em;
+	li {
+		padding: 0 2%;
+
+		&:hover > a svg path {
+			fill: $color__svgfill-homeplaces-hover;
 		}
 	}
 
 	svg {
-		width: 175px;
+		max-width: 175px;
 		margin-bottom: $size__default-bot-marg;
 	}
 }
 
 .home-happenings {
-	padding: 2em;
+	padding: 1em;
+
+	@media screen and (min-width: $bp__menu-button+1) {
+		padding: 2em;
+	}
 
 	.post-container {
-		border: 1px solid $color__post-containers;
-		overflow: auto;
+		border 		: 1px solid $color__post-containers;
+		overflow 	: auto;
+		margin 		: 1em;
 	}
 
 	.post-wrapper {
-		margin: 0 auto;
-		width: 60%;
-		text-align: center;
+		margin 		: 0 auto;
+		padding 	: 1em;
+		text-align 	: center;
 	}
 
 	.entry-meta {
-		display 		: inline-block;
 		color 			: $color__text-happenings;
 		text-transform 	: uppercase;
-		float 			: left;
+
+		@media screen and (min-width: $bp__events-half) {
+			@include margcols( 5 );
+		}
 	}
 
 	.entry-title {
-		display: inline-block;
-		text-align: center;
-		width: 75%;
+		text-align 	: center;
+
+		@media screen and (min-width: $bp__events-half) {
+			@include margcols( 5, 3 );
+		}
 
 		a {
 			color 				: $color__text-happenings-title;
@@ -238,24 +330,10 @@
 
 	.post-arrows {
 		color: $color__text-happenings;
-		float: right;
-	}
-}
+		display: none;
 
-.nav-homelinks {
-
-	ul {
-		list-style 	: none;
-		margin 		: 0;
-		text-align 	: center;
-	}
-
-	li {
-		display: inline-block;
-		margin: 2em;
-	}
-
-	svg {
-		width: 75px;
+		@media screen and (min-width: $bp__events-half) {
+			@include margcols( 5 );
+		}
 	}
 }
