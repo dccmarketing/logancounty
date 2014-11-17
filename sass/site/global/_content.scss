@@ -13,7 +13,7 @@
 	width 		: 100%;
 	float 		: left;
 	background 	: $color__background-body;
-	padding 	: 1em;
+	
 
 	@media only screen and (min-width: $bp__menu-button+1) {
 		width: 100%;
@@ -24,4 +24,20 @@
 .entry-header {
 	text-align 	: center;
 	color 		: $color__text-home-headings;
+}
+
+.featured-image {
+	height 				: 300px;
+	background-position : center center;
+	background-size 	: cover;
+	background-repeat 	: no-repeat;
+}
+
+.entry-title {
+	padding 	: 0.25em;
+}
+
+.entry-content {
+	padding 	: 1em;
+	margin 		: 0;
 }

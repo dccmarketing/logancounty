@@ -408,3 +408,27 @@ function add_svg_to_container( $slider, $data ) {
 
 add_filter( 'soliloquy_output_before_container', 'add_svg_to_container', 10, 2 );
 
+
+/**
+ * Returns the URL of the featured image
+ * 
+ * @param 	int 		$postID 		The post ID
+ * @param 	string 		$size 			The image size to return
+ * 
+ * @return 	string | bool 				The URL of the featured image, otherwise FALSE
+ */
+function get_thumbnail_url( $postID, $size = 'thumbnail' ) {
+
+	if ( empty( $postID ) ) { return FALSE; }
+
+	$thumb_id = get_post_thumbnail_id( $postID );
+
+	if ( empty( $thumb_id ) ) { return FALSE; }
+
+	$thumb_array = wp_get_attachment_image_src( $thumb_id, $size, true );
+
+	if ( empty( $thumb_array ) ) { return FALSE; }
+	
+	return $thumb_array[0];
+
+} // get_thumbnail_url()
