@@ -17,11 +17,11 @@ $color__bg-submit-button 	: $navy;
 
 // Text colors
 $color__text-screen				: #21759b;
-$color__text-input				: #666;
-$color__text-input-focus		: #111;
-$color__link					: royalblue;
-$color__link-visited			: purple;
-$color__link-hover				: midnightblue;
+$color__text-input				: $navy;
+$color__text-input-focus		: $navy;
+$color__link					: $navy;
+$color__link-visited			: $navy;
+$color__link-hover				: $navy;
 $color__text-main				: #404040;
 $color__text-social 			: $light;
 $color__text-ins 				: black;
@@ -58,15 +58,15 @@ $color__shadow-button-inner-2-focus : rgba(0, 0, 0, 0.15);
 // Menu colors
 $color__bg-menu-button			: $navy;
 $color__bg-menu-item-mobile		: $med;
-$color__bg-menu-item			: $med;
-$color__bg-menu-current			: darken( $color__bg-menu-item, 25% );
+$color__bg-menu-item			: $navy;
+$color__bg-menu-current			: $navy;
 $color__text-menu-mobile		: $light;
 $color__text-menu-mobile-hover 	: $dark;
-$color__text-menu				: $med;
+$color__text-menu				: $navy;
 $color__text-menu-hover			: $light;
 $color__text-menu-button		: $light;
 $color__text-menu-current		: $light;
-$color__text-menu-current-hover	: $med;
+$color__text-menu-current-hover	: $green;
 $color__text-submenu			: $light;
 
 

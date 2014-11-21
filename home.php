@@ -30,7 +30,7 @@ get_header();
 
 				echo FrmFormsController::get_form_shortcode( array( 'id' => 6, 'title' => false, 'description' => false ) );
 
-				get_template_part( 'menus/menu', 'homelinks' );
+				do_action( 'woothemes_testimonials', array( 'limit' => 4, 'display_url' => FALSE ) );
 
 			?></div>
 			<div class="home-events">
@@ -124,6 +124,13 @@ get_header();
 				endif;
 
 			?></div><!-- .home-happenings -->
+			<div class="home-facebook">
+				<h2>Friend Us</h2><?php
+
+				echo do_shortcode('[custom-facebook-feed]');
+
+			?></div><!-- .home-facebook -->
+
 		</main><!-- #main -->
 	</div><!-- #primary --><?php
 

@@ -432,3 +432,7 @@ function get_thumbnail_url( $postID, $size = 'thumbnail' ) {
 	return $thumb_array[0];
 
 } // get_thumbnail_url()
+
+
+
+

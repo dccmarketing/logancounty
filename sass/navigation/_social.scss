@@ -19,7 +19,8 @@
 		@include evencols( 5 );
 
 		svg {
-			width: 48px;
+			width: $font__size-social;
+			height: $font__size-social;
 		}
 
 		&:hover {

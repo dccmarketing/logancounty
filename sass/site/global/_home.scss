@@ -148,6 +148,25 @@
 
 .home-connect {
 	@include homedividers();
+
+	.widget_woothemes_testimonials {
+		margin: $size__default-bot-marg 0 0;
+	}
+
+	.quote {
+		display 		: inline-block;
+		vertical-align 	: top;
+		max-width 		: 25%;
+		padding 		: 1em;
+
+		blockquote {
+			margin: 0;
+		}
+
+		.title {
+			display: block;
+		}
+	}
 }
 
 .nav-homelinks {
@@ -244,7 +263,7 @@
 	.event-date {
 		color 			: $color__text-event-hover-title;
 		line-height 	: 1em;
-		margin 			: 2.25em 0 0.5em;
+		margin 			: 1.25em 0 0.5em;
 	}
 
 	a {
@@ -284,7 +303,7 @@
 }
 
 .home-happenings {
-	padding: 1em;
+	@include homedividers();
 
 	@media screen and (min-width: $bp__menu-button+1) {
 		padding: 2em;
@@ -336,4 +355,10 @@
 			@include margcols( 5 );
 		}
 	}
+}
+
+.home-facebook {
+	padding: 1em;
+
+
 }
