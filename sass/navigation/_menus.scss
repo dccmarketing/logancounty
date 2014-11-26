@@ -80,9 +80,12 @@
 		} // .submenu ul
 
 		li:hover > ul {
-			top 		: 0;
-			visibility 	: inherit;
-			left 		: 100%;
+
+			@media only screen and (min-width: $bp__menu-button+1) {
+				top 		: 0;
+				visibility 	: inherit;
+				left 		: 100%;
+			}
 		}
 	} // first-level ul
 

@@ -117,7 +117,6 @@
 }
 
 .home-top {
-	background-image 	: url(images/main_bkgd.png);
 	background-size 	: cover;
 	background-repeat 	: no-repeat;
 	background-position : top center;
@@ -166,6 +165,27 @@
 		.title {
 			display: block;
 		}
+	}
+}
+
+.home-testimonials {
+	@include homedividers();
+
+	.quote {
+		text-align 	: center;
+		width 		: 100%;
+		
+		@media screen and (min-width: $bp__slider-widest) {
+			@include evencols( 4 );
+		}
+	}
+
+	*[itemprop="name"]:after {
+		content: ", "
+	}
+
+	.testimonials-text {
+		margin: 1em;
 	}
 }
 
