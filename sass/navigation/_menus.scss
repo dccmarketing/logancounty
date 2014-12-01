@@ -30,7 +30,7 @@
 				}
 
 				li {
-					white-space: nowrap;
+					white-space : nowrap;
 
 					&:hover > ul {
 					}
@@ -91,11 +91,6 @@
 
 	li {
 
-		@media only screen and (min-width: $bp__menu-button+1) {
-			position: relative;
-			text-align: right;
-		}
-
 		&:hover > a {
 			background 	: $color__bg-menu-item-mobile;
 			color 		: $color__text-menu-mobile-hover;
@@ -109,8 +104,19 @@
 		}
 
 		@media only screen and (min-width: $bp__menu-button+1) {
+			position: relative;
+			text-align: right;
+
 			&:hover > ul {
 				display: block;
+			}
+
+			li {
+				text-align: left;
+
+				&:hover > a {
+					padding-right: 1em;
+				}
 			}
 		}
 	}

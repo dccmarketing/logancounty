@@ -46,9 +46,10 @@
 	@media only screen and (min-width: $bp__menu-button+1) {
 
 		.frm_first_half {
-			width: 48.5%;
-			float: left;
-			clear: left;
+			width 		: 48.5%;
+			float		: left;
+			clear 		: left;
+			margin-right: 3%;
 		}
 
 		.frm_last_half {
