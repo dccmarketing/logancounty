@@ -435,4 +435,19 @@ function get_thumbnail_url( $postID, $size = 'thumbnail' ) {
 
 
 
+function hide_map_search( $output = '', $atts ) {
+
+	if ( 28 == $post->ID ) {
+
+		return $output;
+
+	}
+
+	return $output;
+
+	pretty( $atts );
+
+} // hide_map_search()
+
+//add_filter( 'sm-display-map', 'hide_map_search', 10 , 2 );
 

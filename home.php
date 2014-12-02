@@ -23,7 +23,7 @@ get_header();
 			</div>
 			<div class="home-adventure">
 				<h2><?php echo get_field( 'things_to_do_header', $options ); ?></h2>
-				<a href="/things-to-do/">
+				<a href="/route-66/">
 					<img class="history-img" src="<?php echo get_template_directory_uri(); ?>/images/history_bkgd_all.png" />
 				</a>
 			</div>
@@ -42,7 +42,7 @@ get_header();
 			<div class="home-events">
 				<h2><?php echo get_field( 'upcoming_events_header', $options ); ?></h2><?php
 
-				$events = tribe_get_events( array('posts_per_page' => 4 ) );
+				$events = tribe_get_events( array( 'posts_per_page' => 4, 'eventDisplay' => 'list' ) );
 
 				if ( empty( $events ) ) {
 
