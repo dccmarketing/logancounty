@@ -15,22 +15,20 @@ get_header();
 			<div class="home-top" style="background-image:url(<?php echo get_thumbnail_url( $options, 'full' ); ?>);">
 				<div class="slider-wrap"><?php
 
-					//echo get_svg( 'moment' );
-				
 					if ( function_exists( 'soliloquy' ) ) { soliloquy( '111' ); }
 
 				?></div>
 			</div>
 			<div class="home-adventure">
 				<h2><?php echo get_field( 'things_to_do_header', $options ); ?></h2>
-				<a href="/route-66/">
+				<a href="/attractions/">
 					<img class="history-img" src="<?php echo get_template_directory_uri(); ?>/images/history_bkgd_all.png" />
 				</a>
 			</div>
 			<div class="home-connect">
 				<h2><?php echo get_field( 'connect_header', $options ); ?></h2><?php
 
-				echo FrmFormsController::get_form_shortcode( array( 'id' => 6, 'title' => false, 'description' => false ) );
+				echo FrmFormsController::get_form_shortcode( array( 'id' => 2, 'title' => false, 'description' => false ) );
 
 			?></div>
 			<div class="home-testimonials">

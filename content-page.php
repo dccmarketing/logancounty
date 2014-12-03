@@ -7,19 +7,22 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<div class="featured-image"<?php
+	<header class="entry-header"><?php
 
-			$image = get_thumbnail_url( get_the_ID(), 'large' );
+		$image = get_thumbnail_url( get_the_ID(), 'large' );
 
-			if ( FALSE !== $image ) {
+		if ( ! $image ) {
 
-				echo ' style="background-image:url(' . $image . ')"';
+			$bg_image = get_field( 'default_header_image', 316 );;
 
-			}
+		} else {
 
-		 ?>></div><?php
+			$bg_image = $image;
 
+		}
+
+		?><div class="featured-image" style="background-image:url(<?php echo $bg_image; ?>);"></div><?php
+		
 		the_title( '<h1 class="entry-title">', '</h1>' );
 	
 	?></header><!-- .entry-header -->

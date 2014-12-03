@@ -400,7 +400,7 @@ add_filter( 'soliloquy_output_caption', 'add_svg_to_captions', 10, 5 );
 
 function add_svg_to_container( $slider, $data ) {
 
-	$slider = $slider . get_svg( 'moment' );
+	$slider = $slider . '<a href="' . esc_url( home_url( '/attractions' ) ) . '">' . get_svg( 'moment' ) . '</a>';
 
 	return $slider;
 
