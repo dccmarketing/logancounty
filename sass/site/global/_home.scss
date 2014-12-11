@@ -97,9 +97,9 @@
 			font-family 	: $font__handwriting;
 			font-size 		: $font__size-home-slider-mobile;
 			line-height 	: 0.85em;
+			max-width 		: 75%;
 
 			@media screen and (min-width: $bp__slider-widest) {
-				padding-right 	: 2em;
 				font-size 		: $font__size-home-slider;
 			}
 		}

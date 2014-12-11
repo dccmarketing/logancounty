@@ -28,7 +28,7 @@ wp_head();
 			<div class="site-branding">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php
 
-					echo get_svg( 'logo_color' );
+					echo logancounty_get_svg( 'logo_color' );
 				
 				?></a>
 			</div><!-- .site-branding -->

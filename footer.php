@@ -10,7 +10,8 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo"><?php
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="tourism_wrap"><a href="http://www.enjoyillinois.com/"><?php echo logancounty_get_svg( 'tourism' ); ?></a></div><?php
 
 		get_template_part( 'menus/menu', 'social' );
 

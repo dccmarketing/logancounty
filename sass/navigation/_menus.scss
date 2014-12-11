@@ -38,6 +38,10 @@
 
 				a {
 					color: $color__text-submenu;
+
+					.caret-right {
+						fill: $color__text-submenu;
+					}
 				}
 			} // breakpoint
 
@@ -101,6 +105,10 @@
 				padding-right 	: 1.5em;
 
 			}
+
+			.caret-right {
+				fill: $color__svg-caret-hover;
+			}
 		}
 
 		@media only screen and (min-width: $bp__menu-button+1) {
@@ -146,10 +154,18 @@
 
 		> a {
 			color: $color__text-menu-current;
+
+			.caret-right {
+				fill: $color__svg-caret-current;
+			}
 		}
 
 		&:hover > a {
 			color: $color__text-menu-current-hover;
+
+			.caret-right {
+				fill: $color__svg-caret-current-hover;
+			}
 		}
 	}
 }
@@ -212,4 +228,12 @@
 	float		: right;
 	text-align	: right;
 	width		: 50%;
+}
+
+.caret-right {
+	width 		: $size__svg-caret-right;
+	height 		: $size__svg-caret-right;
+	fill 		: $color__svg-caret;
+	margin-left : 5px;
+	display 	: inline-block;
 }
