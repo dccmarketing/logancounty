@@ -51,3 +51,18 @@
 		}
 	}
 }
+
+#tribe-events-pg-template {
+	max-width: inherit;
+}
+
+#tribe-events-content-wrapper {
+	padding: 1em;
+}
+
+.events-list .tribe-events-loop, 
+.tribe-events-day .tribe-events-loop, 
+.single-tribe_venue .tribe-events-loop, 
+.single-tribe_organizer .tribe-events-loop {
+	max-width: inherit;
+}
