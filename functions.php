@@ -497,9 +497,21 @@ function logancounty_page_header_image( $pageID ) {
  * 
  * @return 	null
  */
-function no_marker_description() {
+function logancounty_no_marker_description() {
 
 	return TRUE;
 
-} // blank_template()
-add_filter( 'sm-hide-bubble-description', 'no_marker_description' );
+} // logancounty_no_marker_description()
+add_filter( 'sm-hide-bubble-description', 'logancounty_no_marker_description' );
+
+
+
+function logancounty_add_page_header_image( $before ) {
+
+	$before .= logancounty_page_header_image( get_the_ID() );
+
+	return $before;
+
+} // logancounty_add_page_header_image()
+
+add_filter( 'tribe_events_before_html', 'logancounty_add_page_header_image' );
