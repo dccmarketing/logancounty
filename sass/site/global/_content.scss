@@ -3,7 +3,7 @@
 	width 			: 100%;
 	margin 			: 0 auto;
 	overflow 		: auto;
-	
+
 	@media only screen and (min-width: $bp__menu-button+1) {
 		padding-left: $size__site-sidebar;
 	}
@@ -13,11 +13,11 @@
 	width 		: 100%;
 	float 		: left;
 	background 	: $color__background-body;
-	
+
 
 	@media only screen and (min-width: $bp__menu-button+1) {
 		width: 100%;
-		float: right;	
+		float: right;
 	}
 }
 
@@ -60,9 +60,26 @@
 	padding: 1em;
 }
 
-.events-list .tribe-events-loop, 
-.tribe-events-day .tribe-events-loop, 
-.single-tribe_venue .tribe-events-loop, 
+.events-list .tribe-events-loop,
+.tribe-events-day .tribe-events-loop,
+.single-tribe_venue .tribe-events-loop,
 .single-tribe_organizer .tribe-events-loop {
 	max-width: inherit;
+}
+
+.post-912 {
+
+	#location_search_0_tr,
+	#location_search_1_tr,
+	#location_search_2_tr,
+	.location_search_title {
+		display: none;
+	}
+}
+
+.address {
+	text-transform 	: uppercase;
+	margin-bottom 	: 0;
+	display 		: inline-block;
+	font-size 		: 14px;
 }

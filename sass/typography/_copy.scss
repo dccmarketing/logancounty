@@ -2,14 +2,14 @@ p {
 	margin-bottom: $size__default-bot-marg;
 }
 
-b, 
+b,
 strong {
 	font-weight: bold;
 }
 
-dfn, 
-cite, 
-em, 
+dfn,
+cite,
+em,
 i {
 	font-style: italic;
 }
@@ -41,7 +41,7 @@ q p {
 }
 
 address {
-	margin: 0 0 $size__default-bot-marg;
+	margin: 0;
 }
 
 pre {
@@ -55,22 +55,22 @@ pre {
 	padding			: 1.6em;
 }
 
-code, 
+code,
 kbd,
 samp,
-tt, 
+tt,
 var {
 	@include font-size(1.5);
 	font-family: $font__code;
 }
 
-abbr, 
+abbr,
 acronym {
 	border-bottom	: 1px dotted $color__border-abbr;
 	cursor			: help;
 }
 
-mark, 
+mark,
 ins {
 	background		: $color__background-ins;
 	text-decoration	: none;

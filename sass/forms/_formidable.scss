@@ -1,10 +1,5 @@
 .frm_forms {
 
-	label,
-	.frm_description {
-		display: none;
-	}
-
 	input[type="text"],
 	input[type="email"],
 	input[type="url"],
@@ -23,7 +18,12 @@
 		width: 100%;
 
 		input {
-			height: 30px;
+			height			: 30px;
+			vertical-align	: middle;
+		}
+		
+		select {
+			width: 100%;
 		}
 	}
 
@@ -49,7 +49,6 @@
 			width 		: 48.5%;
 			float		: left;
 			clear 		: left;
-			margin-right: 3%;
 		}
 
 		.frm_last_half {
@@ -69,7 +68,6 @@
 			width: 31.5%;
 			float: left;
 			clear: none;
-			margin-right: 2.5%;
 		}
 
 		.frm_last_third {

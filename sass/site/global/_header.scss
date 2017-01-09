@@ -1,16 +1,16 @@
 .site-header {
 	background: $color__bg-header;
 
-	@media only screen and (max-width: $bp__menu-button) {
+	@media only screen and (max-width: $bp__events-half) {
 		overflow: auto;
 	}
 
 	@media only screen and (min-width: $bp__menu-button+1) {
 		margin-bottom	: $size__default-bot-marg;
-		position: fixed;
-		width 	: $size__site-sidebar;
-		height 	: 100%;
-		z-index : 1;
+		position 		: fixed;
+		width 			: $size__site-sidebar;
+		height 			: 100%;
+		z-index 		: 1;
 	}
 
 	.search-submit {
@@ -18,9 +18,9 @@
 	}
 
 	.search-form {
-		display: none;
-		text-align: center;
-		margin-bottom: $size__default-bot-marg;
+		display 		: none;
+		text-align 		: center;
+		margin-bottom 	: $size__default-bot-marg;
 
 		@media only screen and (min-width: $bp__menu-button+1) {
 			display: inherit;
@@ -30,13 +30,38 @@
 			width: 80%;
 		}
 	}
+
+	.nav-social,
+	.address,
+	.phone {
+		display: none;
+
+		@media only screen and (min-width: $bp__menu-button+1) {
+			display: inherit;
+		}
+	}
+
+}
+
+.header_wrap {
+	width : 100%;
+
+	@media only screen and (min-width: $bp__menu-button+1) {
+		text-align 		: right;
+	}
+}
+
+.address,
+.phone {
+	padding: 0 1em;
 }
 
 .site-branding {
-	padding		: 1em;
-	text-align 	: center;
+ 	padding		: 1em;
+ 	text-align 	: center;
 }
 
 .logo_color {
-	max-width: 500px;
+	height 	: 160px;
+	width 	: 315px;
 }

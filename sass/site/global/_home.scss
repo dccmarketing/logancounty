@@ -18,14 +18,26 @@
 	}
 
 	.moment {
-		display: none;		
+		display: none;
 
 		@media screen and (min-width: $bp__menu-button+1) {
+			display 	: inherit;
+			position 	: absolute;
+			top 		: -80px;
+			left 		: -60px;
+			z-index 	: 500;
+			width 		: $size__slider-overlay-mobile;
+			height 		: $size__slider-overlay-mobile;
+		}
+
+		@media screen and (min-width: $bp__slider-widest) {
 			display 	: inherit;
 			position 	: absolute;
 			top 		: -115px;
 			left 		: -100px;
 			z-index 	: 500;
+			width 		: $size__slider-overlay;
+			height 		: $size__slider-overlay;
 		}
 	}
 
@@ -33,11 +45,10 @@
 		display: none;
 
 		@media screen and (min-width: $bp__slider-caption) {
-			display 	: inherit;
-			position	: absolute;
-			width 		: 55px;
-			top 		: 30px;
-			left 		: 55px;
+			display 		: inline-block;
+			width 			: 55px;
+			height 			: 55px;
+			vertical-align 	: middle;
 		}
 	}
 
@@ -54,9 +65,7 @@
 
 		@media screen and (min-width: $bp__menu-button+1) {
 			max-height 	: 550px;
-			position 	: relative;
-			top 		: 50%;
-			transform 	: translateY(-50%);
+			margin-top 	: 100px;
 			margin-left : 65px;
 			width 		: calc( 100% - 65px );
 		}
@@ -77,31 +86,42 @@
 		}
 
 		.soliloquy-caption {
-			background 	: transparent;
-			width 		: 120%;
-			padding 	: 0 0.5em 0 7em;
+			display 	: none;
 
-			bottom 		: -100px;
-			left 		: -50px;
+			@media screen and (min-width: $bp__slider-caption) {
+				background 			: transparent;
+				background 			: url( images/paper_strip_bkgd.png );
+				background-repeat 	: no-repeat;
+				background-size 	: cover;
+				bottom 				: -100px;
+				display 			: table;
+				left 				: -50px;
+				min-height 			: 120px;
+				width 				: 120% !important;
+			}
 
-			background 			: url( images/paper_strip_bkgd.png );
-			background-repeat 	: no-repeat;
-			background-size 	: cover;
+			.soliloquy-caption-inside {
+				background 		: none !important;
+				color 			: $color__text-home-headings;
+				display 		: table-cell;
+				font-family 	: $font__handwriting;
+				font-size 		: $font__size-home-slider-mobile;
+				text-align 		: center;
+				text-shadow 	: none !important;
+				vertical-align 	: middle;
 
+				@media screen and (min-width: $bp__slider-widest) {
+					font-size 		: $font__size-home-slider;
+				}
+			}
 		}
 
-		.soliloquy-caption-inside {
-			padding 		: 0.4em 0;
-			text-shadow 	: none !important;
-			color 			: $color__text-home-headings;
-			font-family 	: $font__handwriting;
-			font-size 		: $font__size-home-slider-mobile;
-			line-height 	: 0.85em;
+		.slide-caption {
+			display 		: inline-block;
 			max-width 		: 75%;
-
-			@media screen and (min-width: $bp__slider-widest) {
-				font-size 		: $font__size-home-slider;
-			}
+			padding-left 	: 0.25em;
+			text-align 		: left;
+			vertical-align 	: middle;
 		}
 	}
 
@@ -127,22 +147,24 @@
 	}
 
 	@media screen and (min-width: $bp__menu-button+1) {
-		height 	: 750px;
+		height 	: 675px;
 	}
 
-	@media screen and (min-width: $bp__slider-widest) {
-		height 	: 1000px;
+	@media screen and (min-width: $bp__footer) {
+		height 	: 800px;
 	}
 }
 
 .home-adventure {
 	text-align: center;
-	
+
 	@include homedividers();
 }
 
 	.history-img {
-		margin: 0.5em 0;
+		margin 		: 0.5em 0;
+		width 		: 100%;
+		max-width 	: 800px;
 	}
 
 .home-connect {
@@ -174,7 +196,7 @@
 	.quote {
 		text-align 	: center;
 		width 		: 100%;
-		
+
 		@media screen and (min-width: $bp__slider-widest) {
 			@include evencols( 4 );
 		}
@@ -232,7 +254,7 @@
 	@media screen and (min-width: $bp__events-half) {
 		@include evencols( 2 );
 		padding: 0 2%;
-	}		
+	}
 
 	@media screen and (min-width: $bp__slider-widest) {
 		@include evencols( 4 );
